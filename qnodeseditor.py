@@ -91,7 +91,7 @@ class QNodesEditor(QObject):
             if (item.isSelected() and item.type() == QNEConnection.Type):
                 port1 = item.port1()
                 port2 = item.port2()
-                if port1.isOutput():
+                if port2.isOutput():
                     self.onRemoveConnection(item, port1, port2)
                 else:
                     self.onRemoveConnection(item, port2, port1)
